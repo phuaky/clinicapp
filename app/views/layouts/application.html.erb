@@ -46,7 +46,11 @@
         </li>
 
           <li class="nav-item">
-            <%= link_to "#{@current_user.email}", '/', class: 'nav-link', method: :get %>
+            <% if @current_user.patient %>
+              <%= link_to "#{@current_user.patient.name}", '/', class: 'nav-link', method: :get %>
+            <% else %>
+              <%= link_to "#{@current_user.doctor.name}", '/', class: 'nav-link', method: :get %>
+            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "Log Out", '/logout', class: 'nav-link', method: :delete %>

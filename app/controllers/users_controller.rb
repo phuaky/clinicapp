@@ -20,8 +20,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    # @user = current_user
-    # @patient = current_patient
+    set_user
+    set_patient
   end
 
   # POST /users
@@ -46,10 +46,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    if @user.update(user_params)
-      # @patient.user_id = @user.id
+    set_user
+    set_patient
+    if @user.update(params.require(:user).permit(:email))
       if @patient.update(patient_params)
-        redirect_to '/', notice: 'User and Patient was successfully updated.'
+        redirect_to "/users/#{@current_user.id}", notice: 'User and Patient was successfully updated.'
       else
         render :edit
       end
@@ -74,7 +75,7 @@ class UsersController < ApplicationController
     end
 
     def set_patient
-      @patient = Patient.find(params[:id])
+      @patient = Patient.where(user_id: @current_user.id).take
     end
 
     # def current_patient

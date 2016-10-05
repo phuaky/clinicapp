@@ -5,6 +5,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
+    # @patient = Patient.where(user_id: @current_user.id).take
   end
 
   # GET /appointments/1
@@ -25,16 +26,18 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    @appointment.patient_id = current_user.id if current_user
+    set_patient
+    @appointment.patient_id = @patient.id
 
-
-    respond_to do |format|
-      if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-        format.json { render :show, status: :created, location: @appointment }
-      else
-        format.html { render :new }
-        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+    if current_user
+      respond_to do |format|
+        if @appointment.save
+          format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
+          format.json { render :show, status: :created, location: @appointment }
+        else
+          format.html { render :new }
+          format.json { render json: @appointment.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -64,13 +67,17 @@ class AppointmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_appointment
+    @appointment = Appointment.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def appointment_params
-      params.require(:appointment).permit(:patient_id, :doctor_id, :date_id, :timeslot_id, :complaint_id)
-    end
+  def set_patient
+    @patient = Patient.where(user_id: @current_user.id).take
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def appointment_params
+    params.require(:appointment).permit(:patient_id, :doctor_id, :day_id, :timeslot_id, :complaint_id)
+  end
 end

@@ -17,11 +17,11 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.patient_id %></td>
-        <td><%= appointment.doctor_id %></td>
-        <td><%= appointment.date_id %></td>
-        <td><%= appointment.timeslot_id %></td>
-        <td><%= appointment.complaint_id %></td>
+        <td><%= appointment.patient.name %></td>
+        <td><%= appointment.doctor.name %></td>
+        <td><%= appointment.day.date %></td>
+        <td><%= appointment.timeslot.timeslot %></td>
+        <td><%= appointment.complaint.complaint %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
