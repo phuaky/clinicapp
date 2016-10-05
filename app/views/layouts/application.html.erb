@@ -29,17 +29,20 @@
         <li class="nav-item">
           <%= link_to "Appointments", "/appointments" , class: 'nav-link', method: :get %>
         </li>
+
+        <!-- Has to be admin for this to appear in the future -->
         <li class="nav-item">
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Admin
             </button>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Toggle users to doctors</a>
               <a class="dropdown-item" href="/days">Add Days</a>
-              <a class="dropdown-item" href="#">Another action</a>
             </div>
           </div>
         </li>
+
           <li class="nav-item">
             <%= link_to "#{@current_user.email}", '/', class: 'nav-link', method: :get %>
           </li>
