@@ -25,6 +25,9 @@
       </ul>
       <ul class="nav navbar-nav pull-xs-right">
         <% if @current_user %>
+        <li class="nav-item">
+          <%= link_to "Profile", "/users/#{@current_user.id}" , class: 'nav-link', method: :get %>
+        </li>
           <li class="nav-item">
             <%= link_to "#{@current_user.email}", '/', class: 'nav-link', method: :get %>
           </li>

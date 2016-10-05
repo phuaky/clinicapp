@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-
+    @user = User.where(:id => current_user.id)
   end
 
   # GET /users/1
@@ -20,6 +20,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    # @user = current_user
+    # @patient = current_patient
   end
 
   # POST /users
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      if @patient.update(user_params)
+      if @patient.update(patient_params)
         redirect_to '/', notice: 'User and Patient was successfully updated.'
       else
         render :show
@@ -75,6 +77,10 @@ class UsersController < ApplicationController
     def set_patient
       @patient = Patient.find(params[:id])
     end
+
+    # def current_patient
+    #   @patient ||= Patient.find_by_id(session[:user_id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
