@@ -1,2 +1,8 @@
-<h1>This is the homepage</h1>
-hello
+<h1>For sick patients only</h1>
+<h1>If not sick, pls dont keng MC</h1>
+
+<% unless @current_user %>
+
+<h3><a href="/login">Log in</a> to book appointments</h3>
+
+<% end %>
