@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+KY cant do
+  1. can delete user from database but not patient's detail
+  2. when edit user profile, data not preloaded into fields. Cannot submit update.
+  

@@ -47,13 +47,14 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
+      # @patient.user_id = @user.id
       if @patient.update(patient_params)
         redirect_to '/', notice: 'User and Patient was successfully updated.'
       else
-        render :show
+        render :edit
       end
     else
-      render :show
+      render :edit
     end
 
   end
@@ -62,10 +63,8 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @patient.destroy
+    redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
   private
