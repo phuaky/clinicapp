@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+
   end
 
   # GET /users/1
@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @patient = Patient.new
   end
 
   # GET /users/1/edit
@@ -26,15 +27,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
+    @patient = Patient.new(patient_params)
+
+    # respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        @patient.user_id = @user.id
+        if @patient.save
+          redirect_to '/', notice: 'User and Patient was successfully created.'
+        else
+          render :new
+        end
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
+    # end
+
+    # respond_to do |format|
+
+    # end
   end
 
   # PATCH/PUT /users/1
@@ -67,8 +77,16 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def set_patient
+      @patient = Patient.find(params[:id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+
+    def patient_params
+      params.require(:user).permit(:name, :allergy)
     end
 end
