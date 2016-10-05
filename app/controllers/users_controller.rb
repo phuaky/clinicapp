@@ -26,10 +26,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
     @patient = Patient.new(patient_params)
 
-    # respond_to do |format|
       if @user.save
         @patient.user_id = @user.id
         if @patient.save
@@ -40,25 +38,22 @@ class UsersController < ApplicationController
       else
         render :new
       end
-    # end
 
-    # respond_to do |format|
-
-    # end
   end
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+    if @user.update(user_params)
+      if @patient.update(user_params)
+        redirect_to '/', notice: 'User and Patient was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :show
       end
+    else
+      render :show
     end
+
   end
 
   # DELETE /users/1
