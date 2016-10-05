@@ -12,18 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :patient_id %>
-    <%= f.number_field :patient_id %>
-  </div>
-
-  <div class="field">
     <%= f.label :doctor_id %>
     <%= f.number_field :doctor_id %>
   </div>
 
   <div class="field">
     <%= f.label :date_id %>
-    <%= f.number_field :date_id %>
+    <%= f.select :date_id, Day.all.collect {|x| [x.date, x.id]} %>
+
   </div>
 
   <div class="field">

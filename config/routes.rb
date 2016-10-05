@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :specialties
+  resources :doctors
+  resources :timeslots
+  resources :days
+  resources :complaints
   resources :patients
   root 'public#index'
 

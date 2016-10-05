@@ -7,7 +7,7 @@ Completed 200 OK in 22ms (Views: 10.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/user" for ::1 at 2016-10-05 15:44:14 +0800
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -15,7 +15,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -60,7 +60,7 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.6ms)
 Started GET "/users" for ::1 at 2016-10-05 15:44:19 +0800
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -68,7 +68,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -216,9 +216,9 @@ ORDER BY c.conname
 [0m
 Started GET "/user" for ::1 at 2016-10-05 16:12:02 +0800
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/user"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -258,14 +258,14 @@ Processing by PublicController#index as HTML
 Completed 406 Not Acceptable in 47ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (PublicController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -416,9 +416,9 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 app/controllers/users_controller.rb:17:in `new'
@@ -435,9 +435,9 @@ Processing by UsersController#new as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 app/controllers/users_controller.rb:17:in `new'
@@ -454,9 +454,9 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 app/controllers/users_controller.rb:7:in `index'
@@ -473,9 +473,9 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 LoadError (cannot load such file -- bcrypt):
-  
+
 app/models/user.rb:10:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 app/controllers/users_controller.rb:7:in `index'
@@ -540,16 +540,16 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<User:0x007fc3e8c89138>):
-     7: 
+     7:
      8: <p>
      9:   <strong>Name:</strong>
     10:   <%= @user.name %>
     11: </p>
-    12: 
+    12:
     13: <p>
-  
+
 app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb__3535845233393476073_70239708256580'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -561,7 +561,7 @@ app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb__35358452333
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.3ms)
 Started GET "/users/1" for ::1 at 2016-10-05 16:29:19 +0800
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -569,7 +569,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -615,7 +615,7 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
 Started GET "/" for ::1 at 2016-10-05 16:29:25 +0800
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -623,7 +623,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -711,7 +711,7 @@ Processing by PublicController#index as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: bootstrap.
 Load paths:
   /Users/Phuaky/Code/clinicapp/clinicapp/app/assets/config
@@ -726,12 +726,12 @@ Load paths:
   /usr/local/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
     4:     <title>Clinicapp</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    9: 
+    9:
    10:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-  
+
 app/assets/stylesheets/application.scss:17
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1211180768840105521_70239706482880'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -749,7 +749,7 @@ Processing by PublicController#index as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (File to import not found or unreadable: bootstrap.
 Load paths:
   /Users/Phuaky/Code/clinicapp/clinicapp/app/assets/config
@@ -764,12 +764,12 @@ Load paths:
   /usr/local/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
     4:     <title>Clinicapp</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    9: 
+    9:
    10:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-  
+
 app/assets/stylesheets/application.scss:17
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1211180768840105521_70239667906900'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -930,7 +930,7 @@ ORDER BY c.conname
 [0m
 Started GET "/users/new" for ::1 at 2016-10-05 16:54:04 +0800
   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -938,7 +938,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -984,7 +984,7 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
 Started GET "/" for ::1 at 2016-10-05 16:55:53 +0800
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -992,7 +992,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -1221,9 +1221,9 @@ Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for ::1 at 2016-10-05 17:13:13 +0800
-  
+
 AbstractController::ActionNotFound (The action 'new' could not be found for SessionsController):
-  
+
 actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
@@ -1276,156 +1276,43 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
-Started GET "/" for ::1 at 2016-10-05 17:27:01 +0800
-  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-	bin/rails db:migrate RAILS_ENV=development
-
-):
-  
-activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
-activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
-web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
-web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
-railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.0) lib/puma/configuration.rb:225:in `call'
-puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.0) lib/puma/server.rb:415:in `process_client'
-puma (3.6.0) lib/puma/server.rb:275:in `block in run'
-puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
-Started GET "/" for ::1 at 2016-10-05 17:27:04 +0800
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-	bin/rails db:migrate RAILS_ENV=development
-
-):
-  
-activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
-activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
-activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
-web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
-web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
-railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.0) lib/puma/configuration.rb:225:in `call'
-puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.0) lib/puma/server.rb:415:in `process_client'
-puma (3.6.0) lib/puma/server.rb:275:in `block in run'
-puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.7ms)
-  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
-  [1m[35m (122.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "clinicapp_development"[0m
-  [1m[35m (122.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "clinicapp_test"[0m
-  [1m[35m (313.7ms)[0m  [1m[35mCREATE DATABASE "clinicapp_development" ENCODING = 'UTF8'[0m
-  [1m[35m (244.4ms)[0m  [1m[35mCREATE DATABASE "clinicapp_test" ENCODING = 'UTF8'[0m
-  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5583657543682370040);[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (21.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5583657543682370040);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Migrating to CreateUsers (20161005074343)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005074343"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005074343"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
 Migrating to CreateAppointments (20161005080422)
-  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" serial primary key, "patient_id" integer, "doctor_id" integer, "date_id" integer, "timeslot_id" integer, "complaint_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" serial primary key, "patient_id" integer, "doctor_id" integer, "date_id" integer, "timeslot_id" integer, "complaint_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005080422"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
 Migrating to AddNameAllergyToUsers (20161005084345)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
-  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "allergy" character varying[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005084345"]]
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "allergy" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005084345"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
 Migrating to CreatePatients (20161005085033)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "patients" ("id" serial primary key, "user_id" character varying, "name" character varying, "allergy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005085033"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "patients" ("id" serial primary key, "user_id" character varying, "name" character varying, "allergy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005085033"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComplaints (20161005093908)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "complaints" ("id" serial primary key, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005093908"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-05 09:27:31 UTC], ["updated_at", 2016-10-05 09:27:31 UTC]]
-  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-05 09:43:05 UTC], ["updated_at", 2016-10-05 09:43:05 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5583657543682370040)[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (4.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1437,7 +1324,19 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-  [1m[35m (4.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'complaints'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1449,7 +1348,7 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-  [1m[35m (4.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1461,474 +1360,917 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-Started GET "/" for ::1 at 2016-10-05 17:27:42 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5583657543682370040);[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (3.2ms)
-Completed 500 Internal Server Error in 581ms (ActiveRecord: 0.0ms)
-
-
-  
-ActionView::Template::Error (Missing partial partials/_flash with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
-  * "/Users/YiHui1/Dropbox/fundamentals/ruby/clinicapp/app/views"
-):
-    13: 
-    14:   <body>
-    15: 
-    16:     <%= render "partials/flash" %>
-    17: 
-    18:     <% if @current_user %>
-    19:       <%= @current_user.email %> <%= link_to "Log Out", '/logout', method: :delete %>
-  
-app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___2953320679540130886_70316218151800'
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.5ms)
-Started GET "/" for ::1 at 2016-10-05 17:29:14 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 17:29:23 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"qh1BycBspysAuEAeLG6O0BoP88LwZ5WPlhlyV59jBycfBlBMoXX9AWmCp2vVwYwFSQ/htQVFL+/sTd0X5RQ+Lw=="}
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (9.2ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 93ms (Views: 68.7ms | ActiveRecord: 5.8ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:29:57 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (1.0ms)
-Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 17:30:01 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"di5kdEopLWseDVsBkVgExKyD9K5zpyrO5+hWeh9mztnDNXXxKzB3QXc3vHRo9wYR/4Pm2YaFkK6dvPk6ZRH30Q=="}
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (2.1ms)
-  Rendered partials/_flash.html.erb (0.4ms)
-Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/login" for ::1 at 2016-10-05 17:30:05 +0800
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3WUV3LcACSEyeImVdzqINtGnMnaUMf1QXGWbMDSs+odofgRZ1hlTC1tCbuCOlYrjgqcgAWETRzAmMTRwTtvDjw==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-Redirected to http://localhost:3000/login
-Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 17:30:05 +0800
-Processing by SessionsController#new as HTML
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (1.1ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:34:43 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:34:58 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/new" for ::1 at 2016-10-05 17:35:01 +0800
-Processing by UsersController#new as HTML
-  Rendering users/new.html.erb within layouts/application
-  Rendered users/_form.html.erb (4.8ms)
-  Rendered users/new.html.erb within layouts/application (6.7ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users" for ::1 at 2016-10-05 17:35:17 +0800
-Processing by UsersController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mv+CyV1G8vwpPRndj/8P8fZx7+HXGL+Mzn4a+XAqUkqksTjQ3F3H5HQgn8ieiXCdf8PmCdacYaXBvJmH0zcIuw==", "user"=>{"email"=>"asd@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "asd@email.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "asd@email.com"], ["password_digest", "$2a$10$DKx8SQ0wtHrDtXuL/QxQWOJhBFRGpnD5.YEYgj35EU..5j8XTkzRS"], ["created_at", 2016-10-05 09:35:17 UTC], ["updated_at", 2016-10-05 09:35:17 UTC]]
-  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/users/1
-Completed 302 Found in 93ms (ActiveRecord: 4.5ms)
-
-
-Started GET "/users/1" for ::1 at 2016-10-05 17:35:17 +0800
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  Rendered users/show.html.erb within layouts/application (0.7ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/users" for ::1 at 2016-10-05 17:35:24 +0800
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  Rendered users/index.html.erb within layouts/application (3.6ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:35:31 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.5ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:36:01 +0800
-Processing by PublicController#index as HTML
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 17:36:26 +0800
-  
-SyntaxError (/Users/YiHui1/Dropbox/fundamentals/ruby/clinicapp/app/controllers/application_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
-  before_action: current_user
-                ^):
-  
-app/controllers/application_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
-app/controllers/public_controller.rb:1:in `<top (required)>'
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.9ms)
-Started GET "/" for ::1 at 2016-10-05 17:36:33 +0800
-  
-SyntaxError (/Users/YiHui1/Dropbox/fundamentals/ruby/clinicapp/app/controllers/application_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
-  before_action: :current_user
-                ^):
-  
-app/controllers/application_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
-app/controllers/public_controller.rb:1:in `<top (required)>'
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
-  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.1ms)
-Started GET "/" for ::1 at 2016-10-05 17:36:56 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 17:36:58 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"8Hlf8qsemi+HGKZngeBBrJvZtswP8D507rztm5r+73BFYk53ygfABe4iQRJ4T0N5yNmku/rShBSU6ELb4InWeA=="}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (2.0ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 96ms (Views: 82.0ms | ActiveRecord: 5.2ms)
-
-
-Started POST "/login" for ::1 at 2016-10-05 17:37:02 +0800
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f3EiOcQYArC+5LadoZJZFYe9cBmTtc2+HS5UHfqkTDnKajO8pQFYmtfeUehYPVvA1L1ibmaXd95nevtdgNN1MQ==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-Redirected to http://localhost:3000/login
-Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 17:37:02 +0800
-Processing by SessionsController#new as HTML
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (4.1ms)
-  Rendered partials/_flash.html.erb (1.3ms)
-Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/users/new" for ::1 at 2016-10-05 17:37:14 +0800
-Processing by UsersController#new as HTML
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering users/new.html.erb within layouts/application
-  Rendered users/_form.html.erb (2.3ms)
-  Rendered users/new.html.erb within layouts/application (4.4ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 89ms (Views: 82.6ms | ActiveRecord: 0.5ms)
-
-
-Started POST "/users" for ::1 at 2016-10-05 17:37:18 +0800
-Processing by UsersController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u42dllymy9oixuB3eDQRHBPdLFqyuRwgdt0R9f4Xop4twyeP3b3+wn/bZmJpQm5wmm8lsrM9wgl5H5KLXQr4bw==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Migrating to CreateDays (20161005094620)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "triceo@gmail.com"], ["password_digest", "$2a$10$VF8/0gVn1XPERek3BBnJa..4Wqyb7v/oce779ASuI/dtktyDm8H2q"], ["created_at", 2016-10-05 09:37:18 UTC], ["updated_at", 2016-10-05 09:37:18 UTC]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/users/2
-Completed 302 Found in 83ms (ActiveRecord: 4.3ms)
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "days" ("id" serial primary key, "date" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005094620"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTimeslots (20161005094641)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "timeslots" ("id" serial primary key, "timeslot" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005094641"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5583657543682370040)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'complaints'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'days'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'timeslots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for 101.127.194.194 at 2016-10-05 09:48:23 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5053ms (Views: 5042.8ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/users/2" for ::1 at 2016-10-05 17:37:18 +0800
-Processing by UsersController#show as HTML
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 09:48:48 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (21.7ms)
+  Rendered days/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 133ms (Views: 116.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/timeslot/new" for 101.127.194.194 at 2016-10-05 09:49:06 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/timeslot/new"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (24.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.4ms)
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:49:14 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (3.1ms)
+  Rendered timeslots/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 230ms (Views: 214.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 09:49:38 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (4.7ms)
+  Rendered complaints/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 306ms (Views: 158.1ms | ActiveRecord: 120.5ms)
+
+
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 09:50:22 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VegEiMAmy5UcsYhFOphyY56LCPT7qE0sEETm1jonzkP50J2rBD3ZVJmtWFafCnQctF/fxV6Vh6m48DjhvRn/Jw==", "complaint"=>{"type"=>"flu"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'flu'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Complaint.inheritance_column to use another column for that information.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.9ms)
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 09:50:53 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (3.8ms)
+  Rendered days/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 136ms (Views: 133.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/days" for 101.127.194.194 at 2016-10-05 09:51:30 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EZRmz6PfHL6qUz0PlBsIKI9iRSmEtcUSCQW5UiiPfhW9rP/sZ8QOfy9P7RwxiQ5XpbaSGCGID5ehsWdlr7FPcQ==", "day"=>{"date"=>"05/10/2016"}, "commit"=>"Create Day"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "days" ("date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["date", "05/10/2016"], ["created_at", 2016-10-05 09:51:30 UTC], ["updated_at", 2016-10-05 09:51:30 UTC]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/days/1
+Completed 302 Found in 21ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/days/1" for 101.127.194.194 at 2016-10-05 09:51:31 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDay Load (0.5ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering days/show.html.erb within layouts/application
+  Rendered days/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 111ms (Views: 101.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 09:51:48 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (2.8ms)
+  Rendered days/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 157ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/days" for 101.127.194.194 at 2016-10-05 09:51:59 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3o6+keCWeXi+qY6xzt3gKQkBr0n0fuaOXGSmtPDdQAFytieyJI1ruTu1XqJrT+ZWI9V4eFFDLAv00HiDd+NxZQ==", "day"=>{"date"=>"06/10/2016"}, "commit"=>"Create Day"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "days" ("date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["date", "06/10/2016"], ["created_at", 2016-10-05 09:51:59 UTC], ["updated_at", 2016-10-05 09:51:59 UTC]]
+  [1m[35m (120.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/days/2
+Completed 302 Found in 130ms (ActiveRecord: 121.9ms)
+
+
+Started GET "/days/2" for 101.127.194.194 at 2016-10-05 09:51:59 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#show as HTML
   Parameters: {"id"=>"2"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  Rendered users/show.html.erb within layouts/application (1.0ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.7ms)
+  [1m[36mDay Load (0.4ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering days/show.html.erb within layouts/application
+  Rendered days/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 0.7ms)
 
 
-Started GET "/login" for ::1 at 2016-10-05 17:37:20 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"zkrYrYv5bRxqnDrAdAHpk/iTEHWgUKwFC4tnJ4qfpL57Ucko6uA3NgOm3bWNrutGq5MCAlVyFmVx38hn8Oidtg=="}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (1.2ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 09:52:07 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (3.9ms)
+  Rendered days/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 213ms (Views: 210.9ms | ActiveRecord: 0.0ms)
 
 
-Started POST "/login" for ::1 at 2016-10-05 17:37:31 +0800
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jXy6NMTUU47wmNH6g3JmueMKs22Qv0gtNaI6ZYYsSVk4Z6uxpc0JpJmiNo963WRssAqhGmWd8k1P9pUl/FtwUQ==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-Redirected to http://localhost:3000/
-Completed 302 Found in 80ms (ActiveRecord: 0.7ms)
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 09:52:07 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (2.8ms)
+  Rendered days/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:37:31 +0800
+Started POST "/days" for 101.127.194.194 at 2016-10-05 09:52:21 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LQVGWPo1WHPlKeXt+s29/w2iNZSmgxM39MzqJlHIOWGBPd97Pi5KsmA1Nf5fX7uAJ3bipQO+2bJceDQR1vYIBQ==", "day"=>{"date"=>"07/10/2016"}, "commit"=>"Create Day"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "days" ("date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["date", "07/10/2016"], ["created_at", 2016-10-05 09:52:21 UTC], ["updated_at", 2016-10-05 09:52:21 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/days/3
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/days/3" for 101.127.194.194 at 2016-10-05 09:52:21 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDay Load (0.5ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering days/show.html.erb within layouts/application
+  Rendered days/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 113ms (Views: 110.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:52:52 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (3.0ms)
+  Rendered timeslots/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 188ms (Views: 184.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/timeslots" for 101.127.194.194 at 2016-10-05 09:53:28 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z/FeJJS7YW92vFcRV/GVjwm8fDXqv6o2paYrhx4Wb4PLyccHUKBzrvOghwLyY5PwI2irBE+CYLMNEvWwmShe5w==", "timeslot"=>{"timeslot"=>"9am - 10am"}, "commit"=>"Create Timeslot"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "timeslots" ("timeslot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["timeslot", "9am - 10am"], ["created_at", 2016-10-05 09:53:28 UTC], ["updated_at", 2016-10-05 09:53:28 UTC]]
+  [1m[35m (101.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/timeslots/1
+Completed 302 Found in 110ms (ActiveRecord: 103.1ms)
+
+
+Started GET "/timeslots/1" for 101.127.194.194 at 2016-10-05 09:53:29 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTimeslot Load (0.7ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering timeslots/show.html.erb within layouts/application
+  Rendered timeslots/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 133ms (Views: 125.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:53:35 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (5.5ms)
+  Rendered timeslots/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 159ms (Views: 156.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:53:36 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (3.0ms)
+  Rendered timeslots/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 204ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/timeslots" for 101.127.194.194 at 2016-10-05 09:53:46 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W0YUZU4exh6H+SEWLiHz5Oujrr5pRZfcQ+Cwz4cUefX3fo1GigXU3wLl8QWLs/WbwXd5j8x4XVnrVG74ACpIkQ==", "timeslot"=>{"timeslot"=>"10am - 11am"}, "commit"=>"Create Timeslot"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "timeslots" ("timeslot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["timeslot", "10am - 11am"], ["created_at", 2016-10-05 09:53:46 UTC], ["updated_at", 2016-10-05 09:53:46 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/timeslots/2
+Completed 302 Found in 177ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/timeslots/2" for 101.127.194.194 at 2016-10-05 09:53:47 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTimeslot Load (0.5ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering timeslots/show.html.erb within layouts/application
+  Rendered timeslots/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 267ms (Views: 262.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:53:52 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (17.6ms)
+  Rendered timeslots/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 409ms (Views: 400.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 09:53:53 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (7.7ms)
+  Rendered timeslots/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 280ms (Views: 270.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/timeslots" for 101.127.194.194 at 2016-10-05 09:54:37 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S06tkOtcwzkRfFyM1DcFlHAjatSQyr8TGZIn1eE1YwrndjSzL0fR+JRgjJ9xpQPrWve95TX3dZaxJvniZgtSbg==", "timeslot"=>{"timeslot"=>"11am - 12pm"}, "commit"=>"Create Timeslot"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "timeslots" ("timeslot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["timeslot", "11am - 12pm"], ["created_at", 2016-10-05 09:54:37 UTC], ["updated_at", 2016-10-05 09:54:37 UTC]]
+  [1m[35m (260.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/timeslots/3
+Completed 302 Found in 271ms (ActiveRecord: 266.1ms)
+
+
+Started GET "/timeslots/3" for 101.127.194.194 at 2016-10-05 09:54:37 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTimeslot Load (0.5ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering timeslots/show.html.erb within layouts/application
+  Rendered timeslots/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1110ms (Views: 1106.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 09:54:50 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (3.5ms)
+  Rendered complaints/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 294ms (Views: 291.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 09:55:06 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJquaXUo0HUHRPy47XOJePJV78seWcVks1EIMmWMQomUojdKsTPCtIJYLKtI4Y8H2IE4+rtkD+Eb5dYF4rJz7Q==", "complaint"=>{"type"=>"flu"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'flu'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Complaint.inheritance_column to use another column for that information.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.6ms)
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:06:04 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJquaXUo0HUHRPy47XOJePJV78seWcVks1EIMmWMQomUojdKsTPCtIJYLKtI4Y8H2IE4+rtkD+Eb5dYF4rJz7Q==", "complaint"=>{"type"=>"flu"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'flu'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Complaint.inheritance_column to use another column for that information.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.9ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:07:32 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (163.1ms)
+  Rendered complaints/new.html.erb within layouts/application (167.4ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:07:33 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (4.1ms)
+  Rendered complaints/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 979ms (Views: 965.1ms | ActiveRecord: 3.3ms)
+
+
+Completed 200 OK in 595ms (Views: 590.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:08:06 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9OYeaBvI+gtTqZ4FhXUdkId6fF5qlEfbB66iisdOtn1Y3odL39Poyta1ThYg5xvvra6rb8+pjV6vGny9QHCHGQ==", "complaint"=>{"type"=>"high fever"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'high fever'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Complaint.inheritance_column to use another column for that information.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.5ms)
+Started GET "/days" for 101.127.194.194 at 2016-10-05 10:10:32 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#index as HTML
+  Rendering days/index.html.erb within layouts/application
+  [1m[36mDay Load (1.5ms)[0m  [1m[34mSELECT "days".* FROM "days"[0m
+  Rendered days/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 312ms (Views: 284.2ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/timeslots" for 101.127.194.194 at 2016-10-05 10:10:42 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#index as HTML
+  Rendering timeslots/index.html.erb within layouts/application
+  [1m[36mTimeslot Load (1.6ms)[0m  [1m[34mSELECT "timeslots".* FROM "timeslots"[0m
+  Rendered timeslots/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 247ms (Views: 230.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 10:10:57 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (2.9ms)
+  Rendered timeslots/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 158ms (Views: 155.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/timeslots/new" for 101.127.194.194 at 2016-10-05 10:10:58 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TimeslotsController#new as HTML
+  Rendering timeslots/new.html.erb within layouts/application
+  Rendered timeslots/_form.html.erb (2.7ms)
+  Rendered timeslots/new.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 224ms (Views: 219.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 10:11:10 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (2.4ms)
+  Rendered days/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 203ms (Views: 200.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/days/new" for 101.127.194.194 at 2016-10-05 10:11:12 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DaysController#new as HTML
+  Rendering days/new.html.erb within layouts/application
+  Rendered days/_form.html.erb (3.9ms)
+  Rendered days/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:11:21 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (3.3ms)
+  Rendered complaints/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 195ms (Views: 192.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:11:22 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (16.2ms)
+  Rendered complaints/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 227ms (Views: 220.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:11:44 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8BApfq83c0pkEcMtvBXP/kOGudFWjRwCfYCAgSPsRwpcKLBdayxhi+ENEz4Zh8mBaVJu4POw1ofVNF62pNJ2bg==", "complaint"=>{"type"=>"cough"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'cough'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Complaint.inheritance_column to use another column for that information.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.2ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5583657543682370040);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameTypeColumnInComplaints (20161005102534)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "complaints" RENAME COLUMN "type" TO "complaint"[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161005102534"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5583657543682370040)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (19.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'complaints'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'days'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'timeslots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:35:19 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8BApfq83c0pkEcMtvBXP/kOGudFWjRwCfYCAgSPsRwpcKLBdayxhi+ENEz4Zh8mBaVJu4POw1ofVNF62pNJ2bg==", "complaint"=>{"type"=>"cough"}, "commit"=>"Create Complaint"}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 4.0ms)
+
+
+
+ActiveModel::UnknownAttributeError (unknown attribute 'type' for Complaint.):
+
+app/controllers/complaints_controller.rb:27:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (393.1ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:35:24 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (13.2ms)
+  Rendered complaints/new.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error (undefined method `type' for #<Complaint:0x007f581d068340>):
+    13:
+    14:   <div class="field">
+    15:     <%= f.label :type %>
+    16:     <%= f.text_field :type %>
+    17:   </div>
+    18:
+    19:   <div class="actions">
+
+app/views/complaints/_form.html.erb:16:in `block in _app_views_complaints__form_html_erb__945482732972706783_70008210216180'
+app/views/complaints/_form.html.erb:1:in `_app_views_complaints__form_html_erb__945482732972706783_70008210216180'
+app/views/complaints/new.html.erb:3:in `_app_views_complaints_new_html_erb___4604877625828420611_70008210376640'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.1ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:35:27 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (16.4ms)
+  Rendered complaints/new.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error (undefined method `type' for #<Complaint:0x007f581d6a04d8>):
+    13:
+    14:   <div class="field">
+    15:     <%= f.label :type %>
+    16:     <%= f.text_field :type %>
+    17:   </div>
+    18:
+    19:   <div class="actions">
+
+app/views/complaints/_form.html.erb:16:in `block in _app_views_complaints__form_html_erb__945482732972706783_70008213464300'
+app/views/complaints/_form.html.erb:1:in `_app_views_complaints__form_html_erb__945482732972706783_70008213464300'
+app/views/complaints/new.html.erb:3:in `_app_views_complaints_new_html_erb___4604877625828420611_70008213636620'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (27.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (216.8ms)
+Started GET "/" for 101.127.194.194 at 2016-10-05 10:36:24 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+  Rendered public/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 772ms (Views: 754.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:37:34 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.5ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 77ms (Views: 73.6ms | ActiveRecord: 0.6ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:36:35 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (91.7ms)
+  Rendered complaints/new.html.erb within layouts/application (95.4ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 5.3ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:37:36 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `type' for #<Complaint:0x00000003e249f8>):
+    13:
+    14:   <div class="field">
+    15:     <%= f.label :type %>
+    16:     <%= f.text_field :type %>
+    17:   </div>
+    18:
+    19:   <div class="actions">
+
+app/views/complaints/_form.html.erb:16:in `block in _app_views_complaints__form_html_erb___3066001205885361521_34508520'
+app/views/complaints/_form.html.erb:1:in `_app_views_complaints__form_html_erb___3066001205885361521_34508520'
+app/views/complaints/new.html.erb:3:in `_app_views_complaints_new_html_erb__4575562595879344531_34243600'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.6ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:36:36 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (13.4ms)
+  Rendered complaints/new.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:38:14 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `type' for #<Complaint:0x007f0602180830>):
+    13:
+    14:   <div class="field">
+    15:     <%= f.label :type %>
+    16:     <%= f.text_field :type %>
+    17:   </div>
+    18:
+    19:   <div class="actions">
+
+app/views/complaints/_form.html.erb:16:in `block in _app_views_complaints__form_html_erb___3066001205885361521_69831890597960'
+app/views/complaints/_form.html.erb:1:in `_app_views_complaints__form_html_erb___3066001205885361521_69831890597960'
+app/views/complaints/new.html.erb:3:in `_app_views_complaints_new_html_erb__4575562595879344531_69831890798660'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.5ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:40:25 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (5.7ms)
+  Rendered complaints/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 188ms (Views: 165.7ms | ActiveRecord: 3.8ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:38:32 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.9ms)
-Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.3ms)
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:40:34 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rg2QP/0U70QuAeY22w1CIuCp1YkVjAQamRpmvj+SdhPqNQkcOQ/9hasdNiV+n0Rdyn0CuLCxzp8xrriJuKxHdw==", "complaint"=>{"complaint"=>"flu"}, "commit"=>"Create Complaint"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "complaints" ("complaint", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["complaint", "flu"], ["created_at", 2016-10-05 10:40:34 UTC], ["updated_at", 2016-10-05 10:40:34 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/complaints/1
+Completed 302 Found in 33ms (ActiveRecord: 5.4ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:39:27 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.4ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.3ms)
+Started GET "/complaints/1" for 101.127.194.194 at 2016-10-05 10:40:34 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComplaint Load (0.7ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering complaints/show.html.erb within layouts/application
+  Rendered complaints/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 119ms (Views: 104.5ms | ActiveRecord: 1.8ms)
 
 
-Started DELETE "/logout" for ::1 at 2016-10-05 17:39:30 +0800
-Processing by SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"timRcFvO4EwXAsrPTho+ypN8HKmK3XD+MRWxlp5VLKsDMoD1Ote6Zn44Lbq3tTwfwHwO3n//yp5LQR7W5CIVow=="}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-Redirected to http://localhost:3000/
-Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:40:42 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (2.3ms)
+  Rendered complaints/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 130ms (Views: 127.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:39:30 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.9ms)
-Completed 200 OK in 81ms (Views: 77.5ms | ActiveRecord: 0.4ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:40:43 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (2.1ms)
+  Rendered complaints/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 187ms (Views: 184.9ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/login" for ::1 at 2016-10-05 17:39:32 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"RSs2+SrmkrycxAwsF2ZYP01lVWpKtyY+uSrvyyuivUnwMCd8S//IlvX+61nuyVrqHmVHHb+VnF7DfkCLUdWEQQ=="}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (1.2ms)
-  Rendered partials/_flash.html.erb (1.7ms)
-Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:40:53 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/HHcda6P9mHubn9VVRQqu6JfsR2Au8zO8jUAxJDcJ31QSUVWapTkoGtyr0bwhizEiItmLCWGBktagd7zF+IWGQ==", "complaint"=>{"complaint"=>"fever"}, "commit"=>"Create Complaint"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "complaints" ("complaint", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["complaint", "fever"], ["created_at", 2016-10-05 10:40:53 UTC], ["updated_at", 2016-10-05 10:40:53 UTC]]
+  [1m[35m (126.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/complaints/2
+Completed 302 Found in 135ms (ActiveRecord: 127.8ms)
 
 
-Started POST "/login" for ::1 at 2016-10-05 17:39:37 +0800
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSUu2RoQ/qydj+mAb8ochyT937xKc5Om8Dftc0bR22GEPj9cewmkhvS1DvWWZR5Sd/3Ny79RKcaKY0IzPKbiaQ==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-Redirected to http://localhost:3000/
-Completed 302 Found in 74ms (ActiveRecord: 0.6ms)
+Started GET "/complaints/2" for 101.127.194.194 at 2016-10-05 10:40:54 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mComplaint Load (0.5ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering complaints/show.html.erb within layouts/application
+  Rendered complaints/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.7ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:39:37 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.3ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:40:58 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (2.8ms)
+  Rendered complaints/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 216ms (Views: 212.6ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:40:08 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (1.1ms)
-Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+Started GET "/complaints/new" for 101.127.194.194 at 2016-10-05 10:40:59 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#new as HTML
+  Rendering complaints/new.html.erb within layouts/application
+  Rendered complaints/_form.html.erb (2.4ms)
+  Rendered complaints/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 178ms (Views: 175.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:41:54 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 1.1ms)
+Started POST "/complaints" for 101.127.194.194 at 2016-10-05 10:41:05 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ReP7t4gVeoUB0rRnD9bwfwc+X7kTYPSB9ti8oKm0zh5LxbNGjtHK5EbmsI5rV2+1sguT0FwSVevb7zFBZjiXA==", "complaint"=>{"complaint"=>"cough"}, "commit"=>"Create Complaint"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "complaints" ("complaint", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["complaint", "cough"], ["created_at", 2016-10-05 10:41:05 UTC], ["updated_at", 2016-10-05 10:41:05 UTC]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/complaints/3
+Completed 302 Found in 58ms (ActiveRecord: 4.8ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 17:41:56 +0800
-Processing by PublicController#index as HTML
-  Parameters: {"authenticity_token"=>"vPsBiApd7yjZkir0NYM72IShYTFx1BHcn4/AzquMDnsJ4BANa0S1ArCozYHMLDkN16FzRoT2q7zl22+O0fs3cw=="}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.7ms)
-Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+Started GET "/complaints/3" for 101.127.194.194 at 2016-10-05 10:41:06 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComplaint Load (37.0ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering complaints/show.html.erb within layouts/application
+  Rendered complaints/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 210ms (Views: 167.9ms | ActiveRecord: 37.3ms)
 
 
-Started GET "/" for ::1 at 2016-10-05 18:06:19 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.4ms)
-  Rendered partials/_flash.html.erb (0.6ms)
-Completed 200 OK in 75ms (Views: 71.0ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 18:06:20 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.5ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.7ms)
-
-
-Started DELETE "/logout" for ::1 at 2016-10-05 18:06:21 +0800
-Processing by SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"W6r4TeizfXYXFDMXhGSPCodwkj8JiHMRKPJDrTBblcbusenIiaonXH4u1GJ9y43f1HCASPyqyXFSpuztSiyszg=="}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-Redirected to http://localhost:3000/
-Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 18:06:21 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.8ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 98ms (Views: 95.8ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 18:06:24 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"I9MvVLqFAdybcFbyBxtk0uQMGYlIlozHwFM23vx2+i6WyD7R25xb9vJKsYf+tGYHtwwL/r20Nqe6B5mehgHDJg=="}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (1.5ms)
-  Rendered partials/_flash.html.erb (0.9ms)
-Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/login" for ::1 at 2016-10-05 18:07:14 +0800
-Processing by SessionsController#new as HTML
-  Parameters: {"authenticity_token"=>"8ac8/DKHEHmIQiUs49F+MRuzUqsxy5lKwAWp33lRoahEvC15U55KU+F4wlkafnzkSLNA3MTpIyq6UQafAyaYoA=="}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (1.9ms)
-  Rendered partials/_flash.html.erb (1.1ms)
-Completed 200 OK in 92ms (Views: 87.2ms | ActiveRecord: 0.6ms)
-
-
-Started POST "/login" for ::1 at 2016-10-05 18:07:22 +0800
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KTfKwKyrDunH9BXMIG40W+AOu2qdcQk4/QU0APUmXSScLNtFzbJUw67O8rnZwTaOsw6pHWhTs1iHUZtAj1FkLA==", "user"=>{"email"=>"triceo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "triceo@gmail.com"], ["LIMIT", 1]]
-Redirected to http://localhost:3000/
-Completed 302 Found in 75ms (ActiveRecord: 0.6ms)
-
-
-Started GET "/" for ::1 at 2016-10-05 18:07:22 +0800
-Processing by PublicController#index as HTML
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  Rendering public/index.html.erb within layouts/application
-  Rendered public/index.html.erb within layouts/application (0.3ms)
-  Rendered partials/_flash.html.erb (0.8ms)
-Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 0.2ms)
-
-
+Started GET "/complaints/" for 101.127.194.194 at 2016-10-05 10:41:13 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComplaintsController#index as HTML
+  Rendering complaints/index.html.erb within layouts/application
+  [1m[36mComplaint Load (0.5ms)[0m  [1m[34mSELECT "complaints".* FROM "complaints"[0m
+  Rendered complaints/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.5ms)
