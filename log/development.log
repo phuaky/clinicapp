@@ -16841,3 +16841,326 @@ Completed 200 OK in 319ms (Views: 283.5ms | ActiveRecord: 27.0ms)
 
 
 >>>>>>> 35f50c0353c1bc836216020c49e6ea128a065c9b
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5583657543682370040);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5583657543682370040)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'complaints'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'days'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'doctors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'specialties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'timeslots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for 101.127.194.194 at 2016-10-06 03:44:10 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (4.8ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 709ms (Views: 641.4ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/doctors" for 101.127.194.194 at 2016-10-06 03:44:16 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/index.html.erb within layouts/application
+  [1m[36mDoctor Load (46.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/index.html.erb within layouts/application (64.6ms)
+  Rendered partials/_flash.html.erb (1.6ms)
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 219ms (Views: 164.9ms | ActiveRecord: 49.8ms)
+
+
+Started GET "/specialties" for 101.127.194.194 at 2016-10-06 03:44:21 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpecialtiesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering specialties/index.html.erb within layouts/application
+  [1m[36mSpecialty Load (0.8ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  Rendered specialties/index.html.erb within layouts/application (150.8ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 285ms (Views: 126.6ms | ActiveRecord: 149.2ms)
+
+
+Started GET "/doctors" for 101.127.194.194 at 2016-10-06 03:44:28 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/index.html.erb within layouts/application
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/index.html.erb within layouts/application (2.9ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 142.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/doctors/new" for 101.127.194.194 at 2016-10-06 03:44:33 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/new.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/_form.html.erb (114.7ms)
+  Rendered doctors/new.html.erb within layouts/application (117.2ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 247ms (Views: 239.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/doctors" for 101.127.194.194 at 2016-10-06 03:44:37 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#create as HTML
+  Parameters: {"authenticity_token"=>"DMXIPm7MT8yOdtJCqXLEDBBcKFUzMR/PRuNOuKmqb+a4AmrzuRJKJ/qaurRm1Gp5tE+/11iX1NJG4ePWEyNkVw==", "name"=>"Harry", "type"=>"doctor", "user_id"=>"6"}
+  [1m[36mUser Load (130.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: authenticity_token, type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "doctors" ("user_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["name", "Harry"], ["created_at", 2016-10-06 03:44:37 UTC], ["updated_at", 2016-10-06 03:44:37 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "6"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/doctors/new
+Completed 302 Found in 164ms (ActiveRecord: 139.7ms)
+
+
+Started GET "/doctors/new" for 101.127.194.194 at 2016-10-06 03:44:37 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/new.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/_form.html.erb (7.6ms)
+  Rendered doctors/new.html.erb within layouts/application (10.8ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 186ms (Views: 179.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/doctors" for 101.127.194.194 at 2016-10-06 03:44:39 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#create as HTML
+  Parameters: {"authenticity_token"=>"Qk6ZWj9GJgfCVhIjX/HPzZLEnoZrAZO0nRX2a2nHvyLU0jKjzkcxcM4Mw0yo6Mfzuf7Th9M+8iGf1/8pCSR2eg==", "name"=>"Dick", "type"=>"doctor", "user_id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: authenticity_token, type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "doctors" ("user_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["name", "Dick"], ["created_at", 2016-10-06 03:44:39 UTC], ["updated_at", 2016-10-06 03:44:39 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "5"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/doctors/new
+Completed 302 Found in 102ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/doctors/new" for 101.127.194.194 at 2016-10-06 03:44:39 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/new.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/_form.html.erb (5.6ms)
+  Rendered doctors/new.html.erb within layouts/application (7.9ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 138.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/doctors" for 101.127.194.194 at 2016-10-06 03:44:41 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ricqwDogQiZkh/4ZFHGsO5EVze9JWaKgwESdnL2ISh44u4E5yyFVUWjdL3bjaKQFui+A7vFmwzXChpTe3WuDRg==", "name"=>"Tom", "type"=>"doctor", "user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: utf8, authenticity_token, type
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "doctors" ("user_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["name", "Tom"], ["created_at", 2016-10-06 03:44:41 UTC], ["updated_at", 2016-10-06 03:44:41 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/doctors/new
+Completed 302 Found in 17ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/doctors/new" for 101.127.194.194 at 2016-10-06 03:44:41 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/new.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/_form.html.erb (6.5ms)
+  Rendered doctors/new.html.erb within layouts/application (9.0ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 137.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/doctors" for 101.127.194.194 at 2016-10-06 03:44:44 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#create as HTML
+  Parameters: {"authenticity_token"=>"3KxOzFvT7/LbYNA4NdFDk4EKhTzwEgD2UA7s2Iw0kfxKMOU1qtL4hdc6AVfCyEutqjDIPUgtYWNSzOWa7NdYpA==", "name"=>"Tom", "type"=>"patient", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: authenticity_token, type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "patients" ("user_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", "4"], ["name", "Tom"], ["created_at", 2016-10-06 03:44:44 UTC], ["updated_at", 2016-10-06 03:44:44 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "doctors" WHERE "doctors"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://clinicapp-tekwin88.c9users.io/doctors/new
+Completed 302 Found in 29ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/doctors/new" for 101.127.194.194 at 2016-10-06 03:44:44 +0000
+Cannot render console from 101.127.194.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DoctorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doctors/new.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  Rendered doctors/_form.html.erb (5.5ms)
+  Rendered doctors/new.html.erb within layouts/application (8.2ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "1"], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 132.5ms | ActiveRecord: 1.8ms)
+
+

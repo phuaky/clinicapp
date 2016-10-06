@@ -27,3 +27,6 @@ KY cant do
   1. can delete user from database but not patient's detail
   2. when edit user profile, data not preloaded into fields. Cannot submit update.
   3. no idea why dropdown box can only work once. added top script and bottom script on application , which needs to be changed
+
+LTY added
+  1. Trying the feature branch method
