@@ -33,6 +33,7 @@ gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,5 +49,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# For deployment to Heroku
+gem 'rails_12factor', group: :production
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:x64_mingw, :mingw, :mswin]

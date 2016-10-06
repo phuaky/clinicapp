@@ -2,27 +2,27 @@
 
 <p>
   <strong>Patient:</strong>
-  <%= @appointment.patient_id %>
+  <%= @appointment.patient.name %>
 </p>
 
 <p>
   <strong>Doctor:</strong>
-  <%= @appointment.doctor_id %>
+  <%= @appointment.doctor.name %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @appointment.day_id %>
+  <%= @appointment.day.date %>
 </p>
 
 <p>
   <strong>Timeslot:</strong>
-  <%= @appointment.timeslot_id %>
+  <%= @appointment.timeslot.timeslot %>
 </p>
 
 <p>
   <strong>Complaint:</strong>
-  <%= @appointment.complaint_id %>
+  <%= @appointment.complaint.complaint %>
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
