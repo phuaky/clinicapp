@@ -21866,3 +21866,602 @@ Completed 200 OK in 262ms (Views: 230.0ms | ActiveRecord: 16.0ms)
 
 >>>>>>> a8d80f5eed1d98c52a15b59ac2f713661bff3078
 >>>>>>> cce7e38ed3490ce0ac4ce6a3f98bb75762bfa268
+Started GET "/appointments/2" for ::1 at 2016-10-06 17:09:25 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (2.5ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.4ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.3ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (82.6ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 527ms (Views: 427.0ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/appointments" for ::1 at 2016-10-06 17:09:29 +0800
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1[0m  [["patient_id", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (1.6ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.6ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (1.6ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.9ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (39.5ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 127ms (Views: 113.8ms | ActiveRecord: 8.5ms)
+
+
+Started DELETE "/appointments/2" for ::1 at 2016-10-06 17:09:35 +0800
+Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"foKQwvFeKzevJMWxFb4gMhG6APrVUYaC0/CTmCYBZp8Fm+/r2thztslvSVd/O7CfoI5KXqvAT4TOnGdNjdQc/A==", "id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "appointments" WHERE "appointments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/appointments" for ::1 at 2016-10-06 17:09:35 +0800
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1[0m  [["patient_id", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.3ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.3ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.3ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (8.4ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 71.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/appointments/new" for ::1 at 2016-10-06 17:09:36 +0800
+Processing by AppointmentsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  [1m[36mDoctor Load (1.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mDay Load (1.4ms)[0m  [1m[34mSELECT "days".* FROM "days"[0m
+  [1m[36mTimeslot Load (3.7ms)[0m  [1m[34mSELECT "timeslots".* FROM "timeslots"[0m
+  [1m[36mComplaint Load (0.9ms)[0m  [1m[34mSELECT "complaints".* FROM "complaints"[0m
+  Rendered appointments/_form.html.erb (38.9ms)
+  Rendered appointments/new.html.erb within layouts/application (40.6ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 142ms (Views: 131.2ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/appointments" for ::1 at 2016-10-06 17:09:37 +0800
+Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nWp8/6/Wv0rWcUOdVVVFcn6bF51iB5sM3R7VI4Yq0FwQkF91V8TRlb1UI78f6/28qMpPkkFV2ajKgR0bu/Nssw==", "appointment"=>{"doctor_id"=>"1", "day_id"=>"1", "timeslot_id"=>"1", "complaint_id"=>"1"}, "commit"=>"Create Appointment"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (1.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDoctor Load (0.6ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.5ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.6ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.5ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "day_id", "timeslot_id", "complaint_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["patient_id", 1], ["doctor_id", 1], ["day_id", 1], ["timeslot_id", 1], ["complaint_id", 1], ["created_at", 2016-10-06 09:09:37 UTC], ["updated_at", 2016-10-06 09:09:37 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments/3
+Completed 302 Found in 29ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/appointments/3" for ::1 at 2016-10-06 17:09:37 +0800
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.3ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.4ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.4ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (11.4ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 85.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/appointments" for ::1 at 2016-10-06 17:18:43 +0800
+Processing by AppointmentsController#index as HTML
+  Parameters: {"authenticity_token"=>"eCo8lVw8Djpn468beCf30uPtfchZi8ndbaDpLRI1nlMDM0O8d7pWuwGoI/0Somd/Utk3bCcaANtwzB34ueDkMA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1[0m  [["patient_id", 1]]
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.3ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.3ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.3ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (0.3ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (13.5ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 66.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/appointments/new" for ::1 at 2016-10-06 17:18:44 +0800
+Processing by AppointmentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  [1m[36mDoctor Load (0.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mDay Load (0.7ms)[0m  [1m[34mSELECT "days".* FROM "days"[0m
+  [1m[36mTimeslot Load (0.3ms)[0m  [1m[34mSELECT "timeslots".* FROM "timeslots"[0m
+  [1m[36mComplaint Load (0.4ms)[0m  [1m[34mSELECT "complaints".* FROM "complaints"[0m
+  Rendered appointments/_form.html.erb (10.3ms)
+  Rendered appointments/new.html.erb within layouts/application (12.1ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:28:05 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (58.6ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 522ms (Views: 447.2ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2016-10-06 17:29:05 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (43.7ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 139ms (Views: 129.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:29:06 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 102.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:29:13 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2016-10-06 17:29:37 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.4ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 90.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:29:39 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 93.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:29:44 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 76.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:29:49 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"M0s7jSVik27g+VYojgknrOwXOYGLpEvwopBrOlEk38FIUkSkDuTL74ay2s7kjLcBXSNzJfU1gva//J/v+vGlog==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:30:28 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2016-10-06 17:30:30 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (152.3ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id_users_path' for #<#<Class:0x007fa8b3f878d0>:0x007fa8b5306fa0>
+Did you mean?  edit_user_path):
+    34: <% end %>
+    35: 
+    36: <%= link_to 'Show', @user %> |
+    37: <%= link_to 'Back', id_users_path %>
+  
+app/views/users/edit.html.erb:37:in `_app_views_users_edit_html_erb___579605525350883742_70181285553420'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.2ms)
+Started GET "/users/4" for ::1 at 2016-10-06 17:31:25 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (6.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (20.1ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 259ms (Views: 244.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:35:28 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (11.1ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 73.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:35:31 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-10-06 17:36:05 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DsdFSekaCUp9DDlXBPWPfI5VCMpW3Gt2DPY/rIjd6W113jpgwpxRyxtHtbFucB/RP2FCbihNonARmst5IwiTDg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:36:05 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.4ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-10-06 17:36:07 +0800
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"mkcAi6P9MDZDk9rE9+5b9IuQNAfRc/zkro4P2fFdJtDhXn+iiHtotyXYViKda8tZOqR+o6/iNeKz4vsMWohcsw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2016-10-06 17:36:12 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TomE7FA24bEHZPIElpdvvyYHDw4Ft1MOaj3q4v8ciSGI1k6msaDB6JWHy54380TTaxWmEaHFEokxAN+ICkIRw==", "user"=>{"email"=>"tom@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:36:12 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.4ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:36:14 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"md4Z2EvOgygkGY4zEcHsgJOWQutQhjhSNYHhNj4qbFPix2bxYEjbqUJSAtV7RHwtIqIITy4X8VQo7RXjlf8WMA==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 73.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:36:15 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:39:04 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:39:04 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.4ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 100.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:39:11 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"lVtHR/cWEL1f+BXULi+TNNqhylu758auJ8c4RieAu4XuQjhu3JBIPDmzmTJEqgOZa5WA/8V2D6g6q8yTjFXB5g==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 71.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:39:12 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:39:12 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.6ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 78.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:39:14 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"UaQjT0AqPzRkVI8HbpsYTLHbygsgtr+Dv0hLV0dfEF0qvVxma6xntQIfA+EEHojhAO+Ar14ndoWiJL+C7IpqPg==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2016-10-06 17:39:15 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.3ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 76.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-06 17:39:16 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:39:16 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.6ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 77.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:39:21 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"DTQSDtltbaS9oDAzmnB+1uRO+mqdebAdJRI03wlmKLF2LW0n8us1JdvrvNXw9e57VXqwzuPoeRs4fsAKorNS0g==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/appointments" for ::1 at 2016-10-06 17:39:33 +0800
+Processing by AppointmentsController#index as HTML
+  Parameters: {"authenticity_token"=>"gVBIyef1M+bJqunHpRlEHOYTMFGMKSnKtWQwQ4uJZkX6STfgzHNrZ6/hZSHPnNSxVyd69fK44MyoCMSWIFwcJg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1[0m  [["patient_id", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.4ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDay Load (0.3ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimeslot Load (0.3ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComplaint Load (1.4ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "doctors".* FROM "doctors" WHERE "doctors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "days".* FROM "days" WHERE "days"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "timeslots".* FROM "timeslots" WHERE "timeslots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "complaints".* FROM "complaints" WHERE "complaints"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (76.5ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 138ms (Views: 103.7ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/appointments/new" for ::1 at 2016-10-06 17:39:34 +0800
+Processing by AppointmentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  [1m[36mDoctor Load (0.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mDay Load (0.8ms)[0m  [1m[34mSELECT "days".* FROM "days"[0m
+  [1m[36mTimeslot Load (1.1ms)[0m  [1m[34mSELECT "timeslots".* FROM "timeslots"[0m
+  [1m[36mComplaint Load (2.6ms)[0m  [1m[34mSELECT "complaints".* FROM "complaints"[0m
+  Rendered appointments/_form.html.erb (16.2ms)
+  Rendered appointments/new.html.erb within layouts/application (18.2ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2016-10-06 17:39:36 +0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  [1m[36mDoctor Load (0.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mDay Load (0.6ms)[0m  [1m[34mSELECT "days".* FROM "days"[0m
+  [1m[36mTimeslot Load (2.0ms)[0m  [1m[34mSELECT "timeslots".* FROM "timeslots"[0m
+  [1m[36mComplaint Load (1.7ms)[0m  [1m[34mSELECT "complaints".* FROM "complaints"[0m
+  Rendered appointments/_form.html.erb (14.1ms)
+  Rendered appointments/edit.html.erb within layouts/application (17.8ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 92.8ms | ActiveRecord: 6.6ms)
+
+
