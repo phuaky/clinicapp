@@ -20,7 +20,7 @@ user = User.find_or_create_by!(email: 'doctorjones@gmail.com') do |user|
   user.password_confirmation = "password"
 end
 
-Doctor.find_or_create_by!(user_id: user.id) do |doctor|
+doctor_jones = Doctor.find_or_create_by!(user_id: user.id) do |doctor|
   doctor.name =  'Doctor Jones'
 end
 
@@ -29,7 +29,7 @@ user = User.find_or_create_by!(email: 'doctorvictor@gmail.com') do |user|
   user.password_confirmation = "password"
 end
 
-Doctor.find_or_create_by!(user_id: user.id) do |doctor|
+doctor_victor = Doctor.find_or_create_by!(user_id: user.id) do |doctor|
   doctor.name =  'Doctor Victor'
 end
 
@@ -38,7 +38,7 @@ user = User.find_or_create_by!(email: 'tom@gmail.com') do |user|
   user.password_confirmation = "password"
 end
 
-Patient.find_or_create_by!(user_id: user.id) do |patient|
+tom = Patient.find_or_create_by!(user_id: user.id) do |patient|
   patient.name =  'Tom'
   patient.allergy = 'Nuts'
 end
@@ -48,7 +48,7 @@ user = User.find_or_create_by!(email: 'dick@gmail.com') do |user|
   user.password_confirmation = "password"
 end
 
-Patient.find_or_create_by!(user_id: user.id) do |patient|
+dick = Patient.find_or_create_by!(user_id: user.id) do |patient|
   patient.name =  'Dick'
   patient.allergy = 'Honey'
 end
@@ -58,7 +58,7 @@ user = User.find_or_create_by!(email: 'harry@gmail.com') do |user|
   user.password_confirmation = "password"
 end
 
-Patient.find_or_create_by!(user_id: user.id) do |patient|
+harry = Patient.find_or_create_by!(user_id: user.id) do |patient|
   patient.name =  'Harry'
   patient.allergy = 'Pollen'
 end
@@ -78,8 +78,20 @@ complaints.each do |x|
   Complaint.find_or_create_by!(complaint: x)
 end
 
-# Appointment.find_or_create_by!(id: 1) do |appointment|
-#   appointment.patient_id = 1
-# end
+Appointment.find_or_create_by!(doctor_id: doctor_jones.id, day_id: 1, timeslot_id: 1) do |appointment|
+  appointment.patient_id = tom.id
+  appointment.doctor_id = doctor_jones.id
+  appointment.day_id = 1
+  appointment.timeslot_id = 1
+  appointment.complaint_id = 1
+end
+
+Appointment.find_or_create_by!(doctor_id: doctor_jones.id, day_id: 1, timeslot_id: 1) do |appointment|
+  appointment.patient_id = dick.id
+  appointment.doctor_id = doctor_jones.id
+  appointment.day_id = 1
+  appointment.timeslot_id = 1
+  appointment.complaint_id = 1
+end
 
 puts "Finished DB seeding."
