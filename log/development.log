@@ -22465,3 +22465,114 @@ Processing by AppointmentsController#edit as HTML
 Completed 200 OK in 104ms (Views: 92.8ms | ActiveRecord: 6.6ms)
 
 
+Started GET "/users/4" for ::1 at 2016-10-06 17:40:19 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+  Rendered partials/_flash.html.erb (2.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 117.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:40:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"j48TX0JaXgP+pMaPmxx8fiEIHh2IPR8htVt4goWMDeT0lmx2adwGgpjvSmnxmezTkDxUufas1ieoN4xXLll3hw==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-10-06 17:40:26 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZEzv/74tL2IZmgzRqohHh70c6UJmgCLibZ860RZy8pofVZDWlat343/RgDfADdcqDCij5hgR6+Rw884EvaeI+Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:40:26 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.4ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-10-06 17:40:31 +0800
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"K4BXBBV3CoABROzuf5bFxJc8wvv+eRNjs/HQW/1RZm1QmSgtPvFSAWcPYAgVE1VpJgiIX4Do2mWunSSOVoQcDg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-10-06 17:40:33 +0800
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"PtdZLh0iz0Ol6MZKfRNhXwNaiZwJ27M8JHzDVpWi/VJFziYHNqSXwsOjSqwXlvHysm7DOHdKejo5EDeDPneHMQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered partials/_flash.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2016-10-06 17:40:39 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8qYXzBwmsA1/P+pCFZQi71H34ih1srOyRPH3YWiDnx6Jv2jlN6DojBl0ZqR/EbJC4MOojAsjerRZnQO0w1blfQ==", "user"=>{"email"=>"tom@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-06 17:40:39 +0800
+Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/index.html.erb within layouts/application
+  Rendered public/index.html.erb within layouts/application (0.5ms)
+  Rendered partials/_flash.html.erb (0.8ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for ::1 at 2016-10-06 17:40:40 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"zKMfJVRZgFCeKjkEWMrBaByr45jibU0ofGljdSGAYxq3umAMf9/Y0fhhteIyT1HFrZ+pPJz8hC5hBZegilUZeQ==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 87.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for ::1 at 2016-10-06 17:40:43 +0800
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+  Rendered partials/_flash.html.erb (0.4ms)
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."user_id" = $1 LIMIT $2[0m  [["user_id", "4"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.8ms)
+
+

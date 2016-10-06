@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :is_admin, only: [:index]
+  before_action :is_admin, only: [:index, :new]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
