@@ -3,13 +3,13 @@
 one:
   patient_id: 1
   doctor_id: 1
-  date_id: 1
+  day_id: 1
   timeslot_id: 1
   complaint_id: 1
 
 two:
   patient_id: 1
   doctor_id: 1
-  date_id: 1
+  day_id: 1
   timeslot_id: 1
   complaint_id: 1

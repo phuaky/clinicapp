@@ -34,6 +34,10 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+    @doctors = Doctor.all
+    @days = Day.all
+    @timeslots = Timeslot.all
+    @complaints = Complaint.all
   end
 
   # POST /appointments
@@ -46,33 +50,25 @@ class AppointmentsController < ApplicationController
     @complaints = Complaint.all
     set_patient
     @appointment.patient_id = @patient.id
-    puts "CHECKCHECK"
-    puts @appointment.inspect
 
     if current_user
-      respond_to do |format|
         if @appointment.save
-          format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-          format.json { render :show, status: :created, location: @appointment }
+          flash[:success] = 'Appointment was successfully created.'
+          redirect_to @appointment
         else
           format.html { render :new }
-          format.json { render json: @appointment.errors, status: :unprocessable_entity }
         end
-      end
     end
   end
 
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
   def update
-    respond_to do |format|
-      if @appointment.update(appointment_params)
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @appointment }
-      else
-        format.html { render :edit }
-        format.json { render json: @appointment.errors, status: :unprocessable_entity }
-      end
+    if @appointment.update(appointment_params)
+      flash[:success] = 'Appointment was successfully updated.'
+      redirect_to @appointment
+    else
+      format.html { render :edit }
     end
   end
 
