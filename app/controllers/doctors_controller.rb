@@ -10,11 +10,14 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   # GET /doctors/1.json
   def show
+    set_doctor
   end
 
   # GET /doctors/new
   def new
     @doctor = Doctor.new
+    @patients = Patient.all
+    @doctors = Doctor.all
   end
 
   # GET /doctors/1/edit
@@ -24,16 +27,18 @@ class DoctorsController < ApplicationController
   # POST /doctors
   # POST /doctors.json
   def create
-    @doctor = Doctor.new(doctor_params)
-
-    respond_to do |format|
-      if @doctor.save
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
-        format.json { render :show, status: :created, location: @doctor }
-      else
-        format.html { render :new }
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
-      end
+    if params[:type] == 'doctor'
+      @doctor = Doctor.new(params.permit(:user_id, :name))
+      @doctor.save
+      @patient = Patient.where(user_id: @doctor.user_id).take
+      @patient.destroy
+      redirect_to '/doctors/new'
+    elsif params[:type] = 'patient'
+      @patient = Patient.new(params.permit(:user_id, :name))
+      @patient.save
+      @doctor = Doctor.where(user_id: @patient.user_id).take
+      @doctor.destroy
+      redirect_to '/doctors/new'
     end
   end
 
@@ -64,7 +69,7 @@ class DoctorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_doctor
-      @doctor = Doctor.find(params[:id])
+      @doctor = Doctor.where(user_id: @current_user.id).take
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

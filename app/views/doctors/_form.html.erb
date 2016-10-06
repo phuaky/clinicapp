@@ -11,20 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :specialty_id %>
-    <%= f.select :specialty_id, Specialty.all.collect {|x| [x.specialty, x.id]} %>
-  </div>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @patients.each do |patient| %>
+    <tr>
+      <td><%= patient.name %></td>
+      <td><%= button_to 'Change to Doctor', "/doctors", method: "post", class: "btn btn-secondary", params: {user_id: patient.user_id, name: patient.name, type: "doctor"} %></td>
+    </tr>
+    <% end %>
+    <% @doctors.each do |doctor| %>
+    <tr>
+      <td><%= doctor.name %></td>
+      <td><%= button_to 'Change to Patient', "/doctors", method: "post", class: "btn btn-primary", params: {user_id: doctor.user_id, name: doctor.name, type: "patient"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
   <div class="actions">
     <%= f.submit %>
