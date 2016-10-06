@@ -88,6 +88,6 @@ class UsersController < ApplicationController
     end
 
     def patient_params
-      params.require(:user).permit(:name, :allergy)
+      params.require(:patient).permit(:name, :allergy)
     end
 end

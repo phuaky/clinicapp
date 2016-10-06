@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_one :patient
+  has_one :doctor
+  has_one :admin
 
   validates :email,
   presence: true,
