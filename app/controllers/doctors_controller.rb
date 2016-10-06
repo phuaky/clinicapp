@@ -10,7 +10,6 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   # GET /doctors/1.json
   def show
-    set_doctor
   end
 
   # GET /doctors/new
