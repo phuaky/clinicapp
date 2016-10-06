@@ -10,6 +10,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   # GET /doctors/1.json
   def show
+    @doctor = Doctor.find(params[:id])
   end
 
   # GET /doctors/new
@@ -21,6 +22,7 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1/edit
   def edit
+    @doctor = Doctor.find(params[:id])
   end
 
   # POST /doctors
