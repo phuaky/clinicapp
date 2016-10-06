@@ -4,7 +4,17 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    if @current_user.admin
+      @appointments = Appointment.all
+    elsif @current_user.patient
+      @appointments = Appointment.where(patient_id: @current_user.patient.id)
+    elsif @current_user.doctor
+      puts "HEREHERE"
+      @appointments = Appointment.where(doctor_id: @current_user.doctor.id)
+    end
+
+
+
     # @patient = Patient.where(user_id: @current_user.id).take
   end
 
@@ -16,6 +26,10 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    @doctors = Doctor.all
+    @days = Day.all
+    @timeslots = Timeslot.all
+    @complaints = Complaint.all
   end
 
   # GET /appointments/1/edit
@@ -26,8 +40,14 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
+    @doctors = Doctor.all
+    @days = Day.all
+    @timeslots = Timeslot.all
+    @complaints = Complaint.all
     set_patient
     @appointment.patient_id = @patient.id
+    puts "CHECKCHECK"
+    puts @appointment.inspect
 
     if current_user
       respond_to do |format|

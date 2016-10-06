@@ -24,32 +24,46 @@
       <ul class="nav navbar-nav pull-xs-right">
         <% if @current_user %>
         <li class="nav-item">
-          <%= link_to "Profile", "/users/#{@current_user.id}" , class: 'nav-link', method: :get %>
+          <% if @current_user.patient %>
+            <%= link_to "Profile", "/users/#{@current_user.id}" , class: 'nav-link', method: :get %>
+          <% elsif @current_user.doctor %>
+            <%= link_to "Profile", "/doctors/#{@current_user.id}" , class: 'nav-link', method: :get %>
+          <% else %>
+            <%= link_to "Profile", "/users/#{@current_user.id}" , class: 'nav-link', method: :get %>
+          <% end %>
+
         </li>
         <li class="nav-item">
           <%= link_to "Appointments", "/appointments" , class: 'nav-link', method: :get %>
         </li>
 
         <!-- Has to be admin for this to appear in the future -->
+        <% if @current_user %>
+          <% if @current_user.admin %>
         <li class="nav-item">
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Admin
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/doctors">Add doctors</a>
-              <a class="dropdown-item" href="/specialties">Add specialty</a>
+              <a class="dropdown-item" href="/doctors">Add Doctors</a>
+              <a class="dropdown-item" href="/specialties">Add Specialty</a>
               <a class="dropdown-item" href="/days">Add Days</a>
+              <a class="dropdown-item" href="/timeslots">Add Timeslots</a>
               <a class="dropdown-item" href="/complaints">Add Complaints</a>
             </div>
           </div>
         </li>
+          <% end %>
+        <% end %>
 
           <li class="nav-item">
             <% if @current_user.patient %>
               <%= link_to "#{@current_user.patient.name}", '/', class: 'nav-link', method: :get %>
-            <% else %>
+            <% elsif @current_user.doctor %>
               <%= link_to "#{@current_user.doctor.name}", '/', class: 'nav-link', method: :get %>
+            <% else %>
+              <%= link_to "#{@current_user.admin.name}", '/', class: 'nav-link', method: :get %>
             <% end %>
           </li>
           <li class="nav-item">
