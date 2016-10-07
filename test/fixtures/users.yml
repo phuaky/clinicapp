@@ -2,12 +2,8 @@
 
 one:
   email: MyString
-  name: MyString
   password_digest: MyString
-  user_type: MyString
 
 two:
   email: MyString
-  name: MyString
   password_digest: MyString
-  user_type: MyString

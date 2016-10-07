@@ -12,3 +12,69 @@
  *
  */
  @import "bootstrap";
+ 
+ h1 {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 35px;
+    font-size: 40px !important;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    // margin: -7px;
+    // margin-bottom: 0;
+    // background-color: #c00;
+    color: green;
+  }
+
+ h2 {
+    text-align: center;
+    font-weight: bold;
+//    padding-top: 35px;
+    font-size: 40px !important;
+    font-family: "Times New Roman", Georgia, Serif;
+    // margin: -7px;
+    // margin-bottom: 0;
+    // background-color: #c00;
+    color: black;
+  }
+
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 35px;
+    color: yellow;
+    // margin: -7px;
+    // margin-bottom: 0;
+    // background-color: #c00;
+    // color: #fff;
+  }
+  
+ .nav-link {
+   font-size: 18px;
+   font-weight: 500;
+   text-align: center;
+   width:90px;
+   vertical-align: middle !important;;
+   padding: 0.75 !important;
+   color: blue !important;
+ }
+ 
+ li {
+   padding: 0.75 !important;
+ }
+ 
+.btn {
+  height: 40px;
+  padding: 0 !important;
+}
+ 
+.btn-sm {
+   padding: 5px !important;
+}
+
+.homepage {
+  background-image: url("http://i.imgur.com/QdWY9zN.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

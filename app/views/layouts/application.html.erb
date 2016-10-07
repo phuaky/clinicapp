@@ -16,7 +16,8 @@
     <nav class="navbar navbar-light bg-faded">
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link btn btn-sm btn-success" href="/">Home <span class="sr-only">(current)</span></a>
+          <h2>See You Always Clinic</h2>
         </li>
       </ul>
       <ul class="nav navbar-nav pull-xs-right">
@@ -68,11 +69,11 @@
             <%= link_to "Log Out", '/logout', class: 'nav-link', method: :delete %>
           </li>
         <% else %>
-          <li class="nav-item">
+          <li class="nav-item btn btn-sm btn-info">
             <%= link_to "Log In", '/login', class: 'nav-link', method: :get %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/users/new">Sign Up</a>
+            <a class="nav-link btn btn-sm btn-warning" href="/users/new">Sign Up</a>
           </li>
         <% end %>
       </ul>
